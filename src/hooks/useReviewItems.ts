@@ -1,7 +1,9 @@
 import { useMemo } from 'react';
 import { useBuilderStore } from '../store/useBuilderStore';
 import rawData from '../data/products.json';
-import type { StepData } from '../types';
+import type { StepData, ReviewItemData } from '../types';
+
+export type { ReviewItemData } from '../types';
 
 const stepsData = (rawData as { steps: StepData[] }).steps;
 
@@ -11,19 +13,6 @@ const STEP_ORDER: Record<string, number> = {
   sensors: 2,
   'extra-protection': 3,
 };
-
-export interface ReviewItemData {
-  productId: string;
-  variantId?: string;
-  name: string;
-  variantLabel?: string;
-  quantity: number;
-  unitPrice: number;
-  originalPrice?: number;
-  priceLabel?: string;
-  stepId: string;
-  image?: string;
-}
 
 export function useReviewItems(): ReviewItemData[] {
   const cart = useBuilderStore((s) => s.cart);

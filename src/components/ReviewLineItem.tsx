@@ -1,15 +1,9 @@
 import { Truck } from 'lucide-react';
-import type { ReviewItemData } from '../hooks/useReviewItems';
 import { useBuilderStore } from '../store/useBuilderStore';
 import { QuantityStepper } from './QuantityStepper';
+import type { ReviewLineItemProps } from '../types';
 
-interface Props {
-  item: ReviewItemData;
-  static?: boolean; // for non-interactive display (Fast Shipping etc.)
-  customPrice?: React.ReactNode;
-}
-
-export function ReviewLineItem({ item, static: isStatic, customPrice }: Props) {
+export function ReviewLineItem({ item, static: isStatic, customPrice }: ReviewLineItemProps) {
   const increment = useBuilderStore((s) => s.increment);
   const decrement = useBuilderStore((s) => s.decrement);
 

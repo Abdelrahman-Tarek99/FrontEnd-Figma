@@ -1,12 +1,6 @@
-import type { Variant } from '../types';
+import type { VariantSelectorProps } from '../types';
 
-interface Props {
-  variants: Variant[];
-  activeVariantId: string;
-  onSelect: (variantId: string) => void;
-}
-
-export function VariantSelector({ variants, activeVariantId, onSelect }: Props) {
+export function VariantSelector({ variants, activeVariantId, onSelect }: VariantSelectorProps) {
   return (
     <div className="flex flex-wrap items-center gap-1.5">
       {variants.map((v) => {

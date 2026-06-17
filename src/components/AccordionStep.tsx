@@ -1,7 +1,7 @@
-import type { StepData } from "../types";
 import { useAccordion } from "../hooks/useAccordion";
 import { useBuilderStore } from "../store/useBuilderStore";
 import { ProductCard } from "./ProductCard";
+import type { AccordionStepProps } from "../types";
 
 const STEP_ICON_SRC: Record<string, string> = {
   cameras: "/images/livestream.svg",
@@ -9,12 +9,6 @@ const STEP_ICON_SRC: Record<string, string> = {
   sensors: "/images/sensor.svg",
   "extra-protection": "/images/extra-proection.svg",
 };
-
-interface Props {
-  step: StepData;
-  totalSteps: number;
-  nextStepId?: string;
-}
 
 function TriangleChevron({ up }: { up: boolean }) {
   return (
@@ -30,7 +24,7 @@ function TriangleChevron({ up }: { up: boolean }) {
   );
 }
 
-export function AccordionStep({ step, totalSteps, nextStepId }: Props) {
+export function AccordionStep({ step, totalSteps, nextStepId }: AccordionStepProps) {
   const { isOpen, selectedCount, toggle } = useAccordion(step.id);
   const toggleStep = useBuilderStore((s) => s.toggleStep);
   const iconSrc = STEP_ICON_SRC[step.id];

@@ -5,10 +5,10 @@ import {
   Lock, Volume2, Hash, KeyRound, Check, Wifi, HardDrive,
   type LucideIcon,
 } from 'lucide-react';
-import type { ProductData, StepData } from '../types';
 import { useProductCard } from '../hooks/useProductCard';
 import { VariantSelector } from './VariantSelector';
 import { QuantityStepper } from './QuantityStepper';
+import type { ProductCardProps } from '../types';
 
 const ICON_MAP: Record<string, LucideIcon> = {
   Camera, Video, Bell,
@@ -17,12 +17,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Lock, Volume2, Hash, KeyRound, Wifi, HardDrive,
 };
 
-interface Props {
-  product: ProductData;
-  step: StepData;
-}
-
-export function ProductCard({ product, step }: Props) {
+export function ProductCard({ product, step }: ProductCardProps) {
   const {
     activeVariantId,
     setActiveVariantId,

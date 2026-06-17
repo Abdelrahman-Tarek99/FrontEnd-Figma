@@ -1,13 +1,7 @@
 import { Minus, Plus } from 'lucide-react';
+import type { QuantityStepperProps } from '../types';
 
-interface Props {
-  quantity: number;
-  onIncrement: () => void;
-  onDecrement: () => void;
-  compact?: boolean;
-}
-
-export function QuantityStepper({ quantity, onIncrement, onDecrement, compact = false }: Props) {
+export function QuantityStepper({ quantity, onIncrement, onDecrement, compact = false }: QuantityStepperProps) {
   const size = compact ? 'h-8 w-8' : 'h-[35px] w-[35px]';
   const iconSize = compact ? 'w-3 h-3' : 'w-3.5 h-3.5';
   const numW = compact ? 'w-6' : 'w-8';
