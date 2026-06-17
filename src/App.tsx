@@ -12,7 +12,7 @@ export default function App() {
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-8">
 
           {/* LEFT — accordion builder */}
-          <div className="flex-1 min-w-0 flex flex-col gap-4">
+          <div className="flex-1 min-w-0 flex flex-col">
             {steps.map((step, i) => (
               <AccordionStep
                 key={step.id}

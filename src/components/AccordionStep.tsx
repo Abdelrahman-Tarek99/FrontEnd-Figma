@@ -1,13 +1,13 @@
-import type { StepData } from '../types';
-import { useAccordion } from '../hooks/useAccordion';
-import { useBuilderStore } from '../store/useBuilderStore';
-import { ProductCard } from './ProductCard';
+import type { StepData } from "../types";
+import { useAccordion } from "../hooks/useAccordion";
+import { useBuilderStore } from "../store/useBuilderStore";
+import { ProductCard } from "./ProductCard";
 
 const STEP_ICON_SRC: Record<string, string> = {
-  cameras: '/images/livestream.svg',
-  plan: '/images/chosse-plan.svg',
-  sensors: '/images/sensor.svg',
-  'extra-protection': '/images/extra-proection.svg',
+  cameras: "/images/livestream.svg",
+  plan: "/images/chosse-plan.svg",
+  sensors: "/images/sensor.svg",
+  "extra-protection": "/images/extra-proection.svg",
 };
 
 interface Props {
@@ -23,7 +23,7 @@ function TriangleChevron({ up }: { up: boolean }) {
       height="7"
       viewBox="0 0 10 7"
       fill="#4E2FD2"
-      className={`shrink-0 transition-transform duration-200 ${up ? '' : 'rotate-180'}`}
+      className={`shrink-0 transition-transform duration-200 ${up ? "" : "rotate-180"}`}
     >
       <polygon points="5,0 10,7 0,7" />
     </svg>
@@ -36,9 +36,11 @@ export function AccordionStep({ step, totalSteps, nextStepId }: Props) {
   const iconSrc = STEP_ICON_SRC[step.id];
 
   return (
-    <div className={`rounded-xl overflow-hidden pt-3.75 flex flex-col gap-1.25 ${isOpen ? 'bg-step-bg' : 'bg-canvas'}`}>
+    <div
+      className={`pt-3.75 flex flex-col gap-1.25 ${isOpen ? "bg-step-bg" : "bg-canvas border-b border-stroke"}`}
+    >
       {/* Step N of N label */}
-      <div className="px-3.75">
+      <div className="px-3.75 pb-3.75">
         <span className="text-[12px] font-medium text-ink-label leading-none">
           Step {step.step} of {totalSteps}
         </span>
@@ -55,7 +57,12 @@ export function AccordionStep({ step, totalSteps, nextStepId }: Props) {
         >
           <div className="w-6.5 h-6.5 rounded-full bg-card flex items-center justify-center shrink-0">
             {iconSrc && (
-              <img src={iconSrc} alt="" aria-hidden="true" className="w-4 h-4 object-contain" />
+              <img
+                src={iconSrc}
+                alt=""
+                aria-hidden="true"
+                className="w-4 h-4 object-contain"
+              />
             )}
           </div>
 

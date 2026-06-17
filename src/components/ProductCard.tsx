@@ -2,7 +2,7 @@ import {
   Camera, Video, Bell,
   Shield, ShieldCheck, ShieldPlus,
   DoorOpen, Activity, Zap, Flame, Wind, Droplets,
-  Lock, Volume2, Hash, KeyRound, Check,
+  Lock, Volume2, Hash, KeyRound, Check, Wifi, HardDrive,
   type LucideIcon,
 } from 'lucide-react';
 import type { ProductData, StepData } from '../types';
@@ -14,7 +14,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Camera, Video, Bell,
   Shield, ShieldCheck, ShieldPlus,
   DoorOpen, Activity, Zap, Flame, Wind, Droplets,
-  Lock, Volume2, Hash, KeyRound,
+  Lock, Volume2, Hash, KeyRound, Wifi, HardDrive,
 };
 
 interface Props {

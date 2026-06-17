@@ -83,6 +83,7 @@
           "originalPrice": 12.99,
           "description": "Unlimited cameras with AI detection and cloud storage.",
           "icon": "Camera",
+          "image": "/images/wyze.svg",
           "features": [
             "Unlimited cameras",
             "14-day cloud storage",
@@ -97,6 +98,7 @@
           "priceLabel": "/mo",
           "description": "Professional 24/7 monitoring with no long-term contract.",
           "icon": "Shield",
+          "image": "/images/wyze.svg",
           "badge": "Most Popular",
           "features": [
             "24/7 professional monitoring",
@@ -112,6 +114,7 @@
           "priceLabel": "/mo",
           "description": "Cam Unlimited + Home Monitoring combined.",
           "icon": "ShieldPlus",
+          "image": "/images/wyze.svg",
           "features": [
             "Everything in Cam Unlimited",
             "24/7 professional monitoring",
@@ -128,6 +131,16 @@
       "selectionType": "multi",
       "nextLabel": "Add extra protection",
       "products": [
+        {
+          "id": "sense-hub",
+          "name": "Wyze Sense Hub",
+          "price": 0,
+          "originalPrice": 29.92,
+          "description": "Required hub for all Wyze sensors.",
+          "icon": "Wifi",
+          "image": "/images/sense-hub.png",
+          "badge": "Required"
+        },
         {
           "id": "entry-sensor",
           "name": "Wyze Entry Sensor v2",
@@ -179,6 +192,14 @@
       "title": "Add extra protection",
       "selectionType": "multi",
       "products": [
+        {
+          "id": "microsd-card",
+          "name": "Wyze MicroSD Card (256GB)",
+          "price": 20.98,
+          "description": "Local continuous recording storage for your Wyze Cams.",
+          "icon": "HardDrive",
+          "image": "/images/microsd-card.png"
+        },
         {
           "id": "smart-lock",
           "name": "Wyze Lock Bolt",
