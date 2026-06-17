@@ -2,6 +2,7 @@ export interface Variant {
   id: string;
   label: string;
   color?: string;
+  variantImage?: string;   // small thumbnail shown inside the variant chip
 }
 
 export interface ProductData {

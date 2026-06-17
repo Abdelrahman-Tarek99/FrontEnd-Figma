@@ -10,42 +10,41 @@
         {
           "id": "wyze-cam-v4",
           "name": "Wyze Cam v4",
-          "price": 35.98,
+          "price": 27.98,
+          "originalPrice": 35.98,
           "description": "The clearest Wyze Cam ever made. Live view in 2.5K.",
           "icon": "Camera",
           "image": "/images/cam-v4.png",
           "discount": "22%",
           "variants": [
-            { "id": "pack-1", "label": "1 Pack" },
-            { "id": "pack-2", "label": "2 Pack" },
-            { "id": "pack-4", "label": "4 Pack" }
+            { "id": "white", "label": "White", "variantImage": "/images/variant-cam-v4-white.png" },
+            { "id": "grey",  "label": "Grey",  "variantImage": "/images/variant-cam-v4-grey.png" },
+            { "id": "black", "label": "Black", "variantImage": "/images/variant-cam-v4-black.png" }
           ]
         },
         {
           "id": "wyze-cam-pan-v3",
           "name": "Wyze Cam Pan v3",
-          "price": 45.98,
+          "price": 40.46,
+          "originalPrice": 45.98,
           "description": "360° pan and 180° tilt for complete room coverage.",
           "icon": "Video",
           "image": "/images/cam-pan-v3.png",
           "discount": "12%",
           "variants": [
-            { "id": "pack-1", "label": "1 Pack" },
-            { "id": "pack-2", "label": "2 Pack" }
+            { "id": "white", "label": "White", "variantImage": "/images/variant-cam-pan-v3-white.png" },
+            { "id": "black", "label": "Black", "variantImage": "/images/variant-cam-pan-v3-black.png" }
           ]
         },
         {
           "id": "wyze-floodlight-v2",
           "name": "Wyze Cam Floodlight v2",
-          "price": 75.98,
+          "price": 59.26,
+          "originalPrice": 75.98,
           "description": "3000-lumen floodlight with 2.5K security camera.",
           "icon": "Zap",
           "image": "/images/cam-floodlight-v2.png",
-          "discount": "22%",
-          "variants": [
-            { "id": "white", "label": "White" },
-            { "id": "black", "label": "Black" }
-          ]
+          "discount": "22%"
         },
         {
           "id": "wyze-doorbell",
@@ -53,11 +52,7 @@
           "price": 89.98,
           "description": "See your package and visitor simultaneously.",
           "icon": "Bell",
-          "image": "/images/cam-doorbell.png",
-          "variants": [
-            { "id": "wired", "label": "Wired" },
-            { "id": "battery", "label": "Battery" }
-          ]
+          "image": "/images/cam-doorbell.png"
         },
         {
           "id": "wyze-battery-cam-pro",
@@ -67,8 +62,8 @@
           "icon": "ShieldCheck",
           "image": "/images/cam-battery-pro.png",
           "variants": [
-            { "id": "pack-1", "label": "1 Pack" },
-            { "id": "pack-2", "label": "2 Pack" }
+            { "id": "white", "label": "White", "variantImage": "/images/variant-cam-battery-pro-white.png" },
+            { "id": "black", "label": "Black", "variantImage": "/images/variant-cam-battery-pro-black.png" }
           ]
         }
       ]
@@ -145,7 +140,8 @@
           "name": "Wyze Motion Sensor v2",
           "price": 14.98,
           "description": "Pet-friendly PIR sensor with 30 ft detection range.",
-          "icon": "Activity"
+          "icon": "Activity",
+          "image": "/images/motion-sensor.png"
         },
         {
           "id": "climate-sensor",
@@ -191,7 +187,7 @@
           "icon": "Lock",
           "variants": [
             { "id": "silver", "label": "Silver" },
-            { "id": "black", "label": "Black" }
+            { "id": "black",  "label": "Black" }
           ]
         },
         {

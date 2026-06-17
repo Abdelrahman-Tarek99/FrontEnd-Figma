@@ -105,16 +105,13 @@ export function ProductCard({ product, step }: Props) {
   return (
     <div
       className={`
-        flex flex-col sm:flex-row lg:flex-col rounded-xl bg-card
+        flex flex-row rounded-xl bg-card
         border-2 transition-all overflow-hidden
         ${isSelected ? 'border-accent' : 'border-transparent ring-1 ring-stroke/60'}
       `}
     >
       {/* Image area — full-width strip on mobile/desktop, sidebar on tablet */}
-      <div className="relative bg-step-bg overflow-hidden flex items-center justify-center
-        w-full h-36
-        sm:w-28 sm:h-auto sm:shrink-0 sm:self-stretch
-        lg:w-full lg:h-36">
+      <div className="relative bg-canvas overflow-hidden flex items-center justify-center shrink-0 w-28 self-stretch">
         {product.image ? (
           <img
             src={product.image}
@@ -153,15 +150,23 @@ export function ProductCard({ product, step }: Props) {
         )}
 
         <div className="flex items-center justify-between gap-2 mt-auto pt-1">
-          <p className="font-bold text-ink-price text-[14px]">
-            ${product.price.toFixed(2)}
-          </p>
+          <div className="flex flex-col leading-tight">
+            {product.originalPrice && (
+              <span className="text-[11px] text-ink-muted line-through">
+                ${product.originalPrice.toFixed(2)}
+              </span>
+            )}
+            <p className="font-bold text-ink-price text-[14px]">
+              ${product.price.toFixed(2)}
+            </p>
+          </div>
           <QuantityStepper
             quantity={quantity}
             onIncrement={handleIncrement}
             onDecrement={handleDecrement}
           />
         </div>
+
       </div>
     </div>
   );

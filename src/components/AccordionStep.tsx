@@ -1,14 +1,13 @@
-import { Camera, Shield, Activity, Lock, type LucideIcon } from 'lucide-react';
 import type { StepData } from '../types';
 import { useAccordion } from '../hooks/useAccordion';
 import { useBuilderStore } from '../store/useBuilderStore';
 import { ProductCard } from './ProductCard';
 
-const STEP_ICONS: Record<string, LucideIcon> = {
-  cameras: Camera,
-  plan: Shield,
-  sensors: Activity,
-  'extra-protection': Lock,
+const STEP_ICON_SRC: Record<string, string> = {
+  cameras: '/images/livestream.svg',
+  plan: '/images/chosse-plan.svg',
+  sensors: '/images/sensor.svg',
+  'extra-protection': '/images/extra-proection.svg',
 };
 
 interface Props {
@@ -34,12 +33,10 @@ function TriangleChevron({ up }: { up: boolean }) {
 export function AccordionStep({ step, totalSteps, nextStepId }: Props) {
   const { isOpen, selectedCount, toggle } = useAccordion(step.id);
   const toggleStep = useBuilderStore((s) => s.toggleStep);
-  const Icon = STEP_ICONS[step.id] ?? Shield;
-
-  const isSingle = step.selectionType === 'single';
+  const iconSrc = STEP_ICON_SRC[step.id];
 
   return (
-    <div className="bg-step-bg rounded-xl overflow-hidden pt-3.75 flex flex-col gap-1.25">
+    <div className={`rounded-xl overflow-hidden pt-3.75 flex flex-col gap-1.25 ${isOpen ? 'bg-step-bg' : 'bg-canvas'}`}>
       {/* Step N of N label */}
       <div className="px-3.75">
         <span className="text-[12px] font-medium text-ink-label leading-none">
@@ -48,7 +45,7 @@ export function AccordionStep({ step, totalSteps, nextStepId }: Props) {
       </div>
 
       {/* Content box */}
-      <div className="border border-stroke flex flex-col">
+      <div className="flex flex-col">
         {/* Header */}
         <button
           type="button"
@@ -57,7 +54,9 @@ export function AccordionStep({ step, totalSteps, nextStepId }: Props) {
           className="flex w-full items-center gap-2 px-3.75 py-5 text-left"
         >
           <div className="w-6.5 h-6.5 rounded-full bg-card flex items-center justify-center shrink-0">
-            <Icon className="w-4 h-4 text-ink-subtle" />
+            {iconSrc && (
+              <img src={iconSrc} alt="" aria-hidden="true" className="w-4 h-4 object-contain" />
+            )}
           </div>
 
           <span className="flex-1 text-[22px] font-semibold text-ink leading-tight">
@@ -76,20 +75,14 @@ export function AccordionStep({ step, totalSteps, nextStepId }: Props) {
         {/* Expandable content */}
         {isOpen && (
           <div className="px-3.75 pb-5 flex flex-col gap-3.75">
-            <div
-              className={`grid gap-4 ${
-                isSingle
-                  ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
-                  : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
-              }`}
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {step.products.map((product) => (
                 <ProductCard key={product.id} product={product} step={step} />
               ))}
             </div>
 
             {step.nextLabel && nextStepId && (
-              <div>
+              <div className="flex justify-center">
                 <button
                   type="button"
                   onClick={() => toggleStep(nextStepId)}
