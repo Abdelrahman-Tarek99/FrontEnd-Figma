@@ -1,0 +1,36 @@
+@theme {
+  /* ── Surfaces ───────────────────────────────────────────────── */
+  --color-canvas:   #FFFFFF;
+  --color-step-bg:  #EDF4FF;
+  --color-card:     #FFFFFF;
+
+  /* ── Borders ────────────────────────────────────────────────── */
+  --color-border:        #1F1F1F;   /* accordion step content border */
+  --color-stroke:        #CED6DE;   /* review group separators       */
+  --color-stroke-light:  #CCCCCC;   /* unselected variant chip       */
+
+  /* ── Ink (text) ─────────────────────────────────────────────── */
+  --color-ink:        #0B0D10;   /* headings                  */
+  --color-ink-body:   #1F1F1F;   /* body text                 */
+  --color-ink-label:  #484848;   /* "Step N of 4", save link  */
+  --color-ink-muted:  #A8B2BD;   /* review category headers   */
+  --color-ink-subtle: #6F7882;   /* icon strokes, placeholders */
+  --color-ink-price:  #575757;   /* strikethrough price        */
+
+  /* ── Accent (primary purple) ─────────────────────────────────── */
+  --color-accent:       #4E2FD2;
+  --color-accent-hover: #3D22B0;
+  --color-accent-dim:   #E7EFFD;
+
+  /* ── Success ─────────────────────────────────────────────────── */
+  --color-ok:       #0AA288;
+  --color-ok-faint: #1DF0BB;
+
+  /* ── Radii ───────────────────────────────────────────────────── */
+  --radius-xs:   2px;     /* variant label chips */
+  --radius-sm:   4px;     /* stepper, CTA button */
+  --radius-md:   5px;     /* image area          */
+  --radius-lg:   7px;     /* "Next" button       */
+  --radius-xl:   10px;    /* cards, step bg      */
+  --radius-full: 9999px;  /* pill badges         */
+}
