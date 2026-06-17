@@ -1,0 +1,228 @@
+{
+  "steps": [
+    {
+      "id": "cameras",
+      "step": 1,
+      "title": "Choose your cameras",
+      "selectionType": "multi",
+      "nextLabel": "Choose your plan",
+      "products": [
+        {
+          "id": "wyze-cam-v4",
+          "name": "Wyze Cam v4",
+          "price": 35.98,
+          "description": "The clearest Wyze Cam ever made. Live view in 2.5K.",
+          "icon": "Camera",
+          "image": "/images/cam-v4.png",
+          "discount": "22%",
+          "variants": [
+            { "id": "pack-1", "label": "1 Pack" },
+            { "id": "pack-2", "label": "2 Pack" },
+            { "id": "pack-4", "label": "4 Pack" }
+          ]
+        },
+        {
+          "id": "wyze-cam-pan-v3",
+          "name": "Wyze Cam Pan v3",
+          "price": 45.98,
+          "description": "360° pan and 180° tilt for complete room coverage.",
+          "icon": "Video",
+          "image": "/images/cam-pan-v3.png",
+          "discount": "12%",
+          "variants": [
+            { "id": "pack-1", "label": "1 Pack" },
+            { "id": "pack-2", "label": "2 Pack" }
+          ]
+        },
+        {
+          "id": "wyze-floodlight-v2",
+          "name": "Wyze Cam Floodlight v2",
+          "price": 75.98,
+          "description": "3000-lumen floodlight with 2.5K security camera.",
+          "icon": "Zap",
+          "image": "/images/cam-floodlight-v2.png",
+          "discount": "22%",
+          "variants": [
+            { "id": "white", "label": "White" },
+            { "id": "black", "label": "Black" }
+          ]
+        },
+        {
+          "id": "wyze-doorbell",
+          "name": "Wyze Duo Cam Doorbell",
+          "price": 89.98,
+          "description": "See your package and visitor simultaneously.",
+          "icon": "Bell",
+          "image": "/images/cam-doorbell.png",
+          "variants": [
+            { "id": "wired", "label": "Wired" },
+            { "id": "battery", "label": "Battery" }
+          ]
+        },
+        {
+          "id": "wyze-battery-cam-pro",
+          "name": "Wyze Battery Cam Pro",
+          "price": 59.98,
+          "description": "Protect anywhere. See everything in 2.5K resolution.",
+          "icon": "ShieldCheck",
+          "image": "/images/cam-battery-pro.png",
+          "variants": [
+            { "id": "pack-1", "label": "1 Pack" },
+            { "id": "pack-2", "label": "2 Pack" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "step": 2,
+      "title": "Choose your plan",
+      "selectionType": "single",
+      "nextLabel": "Choose your sensors",
+      "products": [
+        {
+          "id": "plan-cam-unlimited",
+          "name": "Cam Unlimited",
+          "price": 9.99,
+          "priceLabel": "/mo",
+          "originalPrice": 12.99,
+          "description": "Unlimited cameras with AI detection and cloud storage.",
+          "icon": "Camera",
+          "features": [
+            "Unlimited cameras",
+            "14-day cloud storage",
+            "AI person, pet & vehicle detection",
+            "Motion-triggered smart alerts"
+          ]
+        },
+        {
+          "id": "plan-home-monitoring",
+          "name": "Home Monitoring",
+          "price": 9.99,
+          "priceLabel": "/mo",
+          "description": "Professional 24/7 monitoring with no long-term contract.",
+          "icon": "Shield",
+          "badge": "Most Popular",
+          "features": [
+            "24/7 professional monitoring",
+            "Cellular backup",
+            "Fire & CO alert response",
+            "Pet-friendly sensor control"
+          ]
+        },
+        {
+          "id": "plan-complete",
+          "name": "Complete Bundle",
+          "price": 14.99,
+          "priceLabel": "/mo",
+          "description": "Cam Unlimited + Home Monitoring combined.",
+          "icon": "ShieldPlus",
+          "features": [
+            "Everything in Cam Unlimited",
+            "24/7 professional monitoring",
+            "Cellular backup",
+            "Priority response"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sensors",
+      "step": 3,
+      "title": "Choose your sensors",
+      "selectionType": "multi",
+      "nextLabel": "Add extra protection",
+      "products": [
+        {
+          "id": "entry-sensor",
+          "name": "Wyze Entry Sensor v2",
+          "price": 5.98,
+          "description": "Alerts when doors or windows open unexpectedly.",
+          "icon": "DoorOpen"
+        },
+        {
+          "id": "motion-sensor",
+          "name": "Wyze Motion Sensor v2",
+          "price": 14.98,
+          "description": "Pet-friendly PIR sensor with 30 ft detection range.",
+          "icon": "Activity"
+        },
+        {
+          "id": "climate-sensor",
+          "name": "Wyze Climate Sensor",
+          "price": 14.98,
+          "description": "Monitor temperature and humidity from anywhere.",
+          "icon": "Wind"
+        },
+        {
+          "id": "leak-sensor",
+          "name": "Wyze Leak Sensor",
+          "price": 14.98,
+          "description": "Detects water leaks and flooding in seconds.",
+          "icon": "Droplets"
+        },
+        {
+          "id": "glass-break",
+          "name": "Glass Break Sensor",
+          "price": 19.98,
+          "description": "Acoustic detection from up to 20 ft away.",
+          "icon": "Zap"
+        },
+        {
+          "id": "smoke-co",
+          "name": "Smoke & CO Alarm",
+          "price": 46.98,
+          "description": "10-year battery with voice alerts and app integration.",
+          "icon": "Flame"
+        }
+      ]
+    },
+    {
+      "id": "extra-protection",
+      "step": 4,
+      "title": "Add extra protection",
+      "selectionType": "multi",
+      "products": [
+        {
+          "id": "smart-lock",
+          "name": "Wyze Lock Bolt",
+          "price": 89.99,
+          "description": "Fingerprint + keypad smart lock with auto-lock.",
+          "icon": "Lock",
+          "variants": [
+            { "id": "silver", "label": "Silver" },
+            { "id": "black", "label": "Black" }
+          ]
+        },
+        {
+          "id": "wyze-plug",
+          "name": "Wyze Plug Outdoor",
+          "price": 17.98,
+          "description": "Smart outdoor outlet with energy monitoring.",
+          "icon": "Zap"
+        },
+        {
+          "id": "keypad",
+          "name": "Wyze Keypad",
+          "price": 29.98,
+          "description": "PIN, fingerprint & key-fob access with LED backlight.",
+          "icon": "Hash"
+        },
+        {
+          "id": "key-fob",
+          "name": "Wyze Key Fob",
+          "price": 19.98,
+          "description": "Arm & disarm your system from up to 1,000 ft away.",
+          "icon": "KeyRound"
+        },
+        {
+          "id": "outdoor-siren",
+          "name": "Wyze Outdoor Siren",
+          "price": 25.98,
+          "description": "105 dB weatherproof siren with built-in strobe light.",
+          "icon": "Volume2"
+        }
+      ]
+    }
+  ]
+}
