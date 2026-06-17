@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useBuilderStore } from '../store/useBuilderStore';
-import { cartKey } from '../store/slices/cartSlice';
+import { cartKey } from '../constants';
 import type { ProductData } from '../types';
 
 export function useProductCard(product: ProductData, stepId: string) {

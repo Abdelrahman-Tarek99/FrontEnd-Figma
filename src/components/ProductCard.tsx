@@ -1,21 +1,9 @@
-import {
-  Camera, Video, Bell,
-  Shield, ShieldCheck, ShieldPlus,
-  DoorOpen, Activity, Zap, Flame, Wind, Droplets,
-  Lock, Volume2, Hash, KeyRound, Check, Wifi, HardDrive,
-  type LucideIcon,
-} from 'lucide-react';
+import { Check, Shield } from 'lucide-react';
 import { useProductCard } from '../hooks/useProductCard';
 import { VariantSelector } from './VariantSelector';
 import { QuantityStepper } from './QuantityStepper';
 import type { ProductCardProps } from '../types';
-
-const ICON_MAP: Record<string, LucideIcon> = {
-  Camera, Video, Bell,
-  Shield, ShieldCheck, ShieldPlus,
-  DoorOpen, Activity, Zap, Flame, Wind, Droplets,
-  Lock, Volume2, Hash, KeyRound, Wifi, HardDrive,
-};
+import { ICON_MAP } from '../constants';
 
 export function ProductCard({ product, step }: ProductCardProps) {
   const {

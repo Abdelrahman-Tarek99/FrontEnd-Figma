@@ -2,13 +2,7 @@ import { useAccordion } from "../hooks/useAccordion";
 import { useBuilderStore } from "../store/useBuilderStore";
 import { ProductCard } from "./ProductCard";
 import type { AccordionStepProps } from "../types";
-
-const STEP_ICON_SRC: Record<string, string> = {
-  cameras: "/images/livestream.svg",
-  plan: "/images/chosse-plan.svg",
-  sensors: "/images/sensor.svg",
-  "extra-protection": "/images/extra-proection.svg",
-};
+import { STEP_ICON_SRC } from "../constants";
 
 function TriangleChevron({ up }: { up: boolean }) {
   return (

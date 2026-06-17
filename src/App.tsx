@@ -1,9 +1,6 @@
-import rawData from './data/products.json';
-import type { StepData } from './types';
+import { stepsData } from './constants';
 import { AccordionStep } from './components/AccordionStep';
 import { ReviewPanel } from './components/ReviewPanel';
-
-const steps = (rawData as { steps: StepData[] }).steps;
 
 export default function App() {
   return (
@@ -13,12 +10,12 @@ export default function App() {
 
           {/* LEFT — accordion builder */}
           <div className="flex-1 min-w-0 flex flex-col">
-            {steps.map((step, i) => (
+            {stepsData.map((step, i) => (
               <AccordionStep
                 key={step.id}
                 step={step}
-                totalSteps={steps.length}
-                nextStepId={steps[i + 1]?.id}
+                totalSteps={stepsData.length}
+                nextStepId={stepsData[i + 1]?.id}
               />
             ))}
           </div>

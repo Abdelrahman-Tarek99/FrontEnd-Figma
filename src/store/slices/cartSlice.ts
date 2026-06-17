@@ -1,33 +1,7 @@
 import type { StateCreator } from 'zustand';
 import type { CartEntry } from '../../types';
 import type { BuilderStore, CartSlice } from '../types';
-
-export const cartKey = (productId: string, variantId?: string): string =>
-  `${productId}:${variantId ?? 'default'}`;
-
-const INITIAL_CART: Record<string, CartEntry> = {
-  'plan-home-monitoring:default': {
-    productId: 'plan-home-monitoring',
-    quantity: 1,
-    stepId: 'plan',
-  },
-  'entry-sensor:default': {
-    productId: 'entry-sensor',
-    quantity: 3,
-    stepId: 'sensors',
-  },
-  'motion-sensor:default': {
-    productId: 'motion-sensor',
-    quantity: 1,
-    stepId: 'sensors',
-  },
-  'smart-lock:silver': {
-    productId: 'smart-lock',
-    variantId: 'silver',
-    quantity: 1,
-    stepId: 'extra-protection',
-  },
-};
+import { cartKey, INITIAL_CART } from '../../constants';
 
 export const createCartSlice: StateCreator<
   BuilderStore,

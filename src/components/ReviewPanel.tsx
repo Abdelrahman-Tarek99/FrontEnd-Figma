@@ -2,26 +2,8 @@ import { useMemo } from 'react';
 import { useCartSummary } from '../hooks/useCartSummary';
 import { useSaveSystem } from '../hooks/useSaveSystem';
 import { ReviewLineItem } from './ReviewLineItem';
-import type { ReviewItemData } from '../hooks/useReviewItems';
-
-const STEP_ORDER = ['cameras', 'plan', 'sensors', 'extra-protection'];
-
-const GROUP_LABELS: Record<string, string> = {
-  cameras: 'Cameras',
-  sensors: 'Sensors',
-  'extra-protection': 'Accessories',
-  plan: 'Plan',
-};
-
-const FAST_SHIPPING_ITEM: ReviewItemData = {
-  productId: 'fast-shipping',
-  name: 'Fast Shipping',
-  quantity: 1,
-  unitPrice: 0,
-  originalPrice: 5.99,
-  stepId: 'plan',
-  image: undefined,
-};
+import { GROUP_LABELS, FAST_SHIPPING_ITEM, STEP_IDS } from '../constants';
+import type { ReviewItemData } from '../types';
 
 export function ReviewPanel() {
   const { items, equipmentTotal, monthlyItem, isEmpty } = useCartSummary();
@@ -29,7 +11,7 @@ export function ReviewPanel() {
 
   const groups = useMemo(() => {
     const map = new Map<string, ReviewItemData[]>();
-    for (const stepId of STEP_ORDER) {
+    for (const stepId of STEP_IDS) {
       const stepItems = items.filter((i) => i.stepId === stepId);
       if (stepId === 'plan' && stepItems.length > 0) {
         map.set(stepId, [...stepItems, FAST_SHIPPING_ITEM]);
